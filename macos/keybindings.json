@@ -1,0 +1,108 @@
+[
+  {
+    "key": "enter",
+    "command": "-renameFile",
+  },
+  {
+    "key": "f2",
+    "command": "renameFile",
+    "when": "filesExplorerFocus",
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "-deleteAllLeft",
+    "when": "textInputFocus && !editorReadonly",
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly",
+  },
+  // editor
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorFocus",
+  },
+  {
+    "key": "cmd+shift+w",
+    "command": "-workbench.action.closeWindow",
+  },
+  {
+    "key": "cmd+shift+w",
+    "command": "workbench.action.closeAllEditors",
+  },
+  // terminal
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus || terminalTabsFocus",
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus || terminalTabsFocus",
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus || terminalTabsFocus",
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus || terminalTabsFocus",
+  },
+  {
+    "key": "cmd+shift+w",
+    "command": "workbench.action.terminal.killAll",
+    "when": "terminalFocus || terminalTabsFocus",
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus || terminalTabsFocus",
+  },
+  // navigation
+  {
+    "key": "alt+tab",
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus || searchViewletFocus",
+  },
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.terminal.focus",
+    "when": "terminalTabsFocus",
+  },
+  // fix Polish characters (ąćęłńóśźżĄĆĘŁŃÓŚŹŻ)
+  {
+    "key": "alt+z",
+    "command": "-workbench.action.terminal.sizeToContentWidth",
+  },
+  {
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap",
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+  },
+]
