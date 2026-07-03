@@ -27,6 +27,14 @@
     "**/CVS": false,
     "**/Thumbs.db": false,
   },
+  "files.readonlyInclude": {
+    "**/.terraform.lock.hcl": true,
+    "**/*.gotmpl.*": true, // files rendered with Go
+    "**/*.tftpl.*": true, // files rendered by Terraform
+    "**/Chart.lock": true,
+    "**/go.sum": true,
+    "**/go.work.sum": true,
+  },
   "search.exclude": {
     "**/.git": true,
     "**/*.code-search": true,
@@ -38,8 +46,13 @@
   "editor.formatOnSaveMode": "file",
   "files.defaultLanguage": "plaintext",
   "files.associations": {
-    "Dockerfile.bash": "shellscript",
+    "*.bash.tftpl": "shellscript",
+    "*.gotmpl": "gotmpl",
+    "*.yaml.gotmpl": "helm",
+    "*.yaml.tftpl": "yaml",
+    "*.yml.gotmpl": "helm",
     "*.yml": "yaml",
+    "Dockerfile.bash": "shellscript",
   },
   "[css][scss][less]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[dockerfile]": { "editor.defaultFormatter": "docker.docker" },
@@ -103,6 +116,15 @@
   "workbench.tips.enabled": false,
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
+
+  "diffEditor.codeLens": false,
+  "editor.codeLens": false,
+  "geminicodeassist.displayInlineContextHint": false,
+
+  "cloudcode.autoDependencies": "off",
+  "go.lintTool": "golangci-lint",
+  "go.toolsManagement.autoUpdate": false,
+  "shellformat.path": "/opt/homebrew/bin/shfmt",
 
   "redhat.telemetry.enabled": false,
 }

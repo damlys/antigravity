@@ -4,6 +4,10 @@
     "command": "-renameFile",
   },
   {
+    "key": "enter",
+    "command": "-workbench.action.terminal.renameActiveTab",
+  },
+  {
     "key": "f2",
     "command": "renameFile",
     "when": "filesExplorerFocus",
